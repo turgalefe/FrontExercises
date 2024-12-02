@@ -1,0 +1,164 @@
+/* Genel ayarlar */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #343a40;
+    color: rgb(91, 71, 71);
+    transition: all 0.3s ease;
+    padding-top: 60px;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    top: 25px; /* X butonunu biraz daha alta yerleştirdik */
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar-nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar-nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.sidebar-nav a.active,
+.sidebar-nav a:hover {
+    background-color: #495057;
+    color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding: 10px 15px;
+    height: 50px; /* Navbar yüksekliği azaltıldı */
+    transition: opacity 0.3s ease;
+}
+
+.navbar .btn {
+    color: white;
+    border-color: white;
+}
+
+/* Navbar link */
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #fff !important;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* "E-Commerce" yazısını ortaladık */
+}
+
+.nav-link {
+    font-size: 1rem; /* Font büyüklüğü azaltıldı */
+    color: #ddd !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #fff !important;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Navbar for blur effect */
+.navbar.blurred {
+    opacity: 0.3;
+    pointer-events: none; /* Disable clicking */
+    transition: opacity 0.3s ease;
+}
+
+/* Sidebar toggle button */
+#toggleSidebar {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333; /* Simge için uygun renk */
+}
+
+/* Main content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Kart tasarımı */
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}

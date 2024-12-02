@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film/Dizi Yönetimi</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Film ve Dizi Yönetimi</h1>
+        
+        <!-- Film Ekle Formu -->
+        <form id="addMovieForm">
+            <h2>Film veya Dizi Ekle</h2>
+            <div class="input-group">
+                <label for="title">Başlık</label>
+                <input type="text" id="title" name="title" placeholder="Film veya Dizi başlığını girin" required>
+            </div>
+            <div class="input-group">
+                <label for="description">Açıklama</label>
+                <textarea id="description" name="description" placeholder="Film veya Dizi hakkında bir açıklama" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="releaseDate">Yayın Tarihi</label>
+                <input type="date" id="releaseDate" name="releaseDate" required>
+            </div>
+            <div class="input-group">
+                <label for="genre">Tür</label>
+                <input type="text" id="genre" name="genre" placeholder="Tür (Action, Drama, vb.)" required>
+            </div>
+            <button type="submit" class="btn">📥 Ekle</button>
+        </form>
+
+        <!-- Yönetim Butonları -->
+        <div class="management-buttons">
+            <button id="getMoviesBtn" class="btn">📋 Filmleri Getir</button>
+            <button id="deleteMoviesBtn" class="btn">❌ Film Sil</button>
+            <button id="editMoviesBtn" class="btn">✏️ Filmleri Düzenle</button>
+        </div>
+
+        <div id="message" class="hidden"></div>
+        
+        <!-- Dinamik İçerik -->
+        <div id="dynamicContent" class="hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
